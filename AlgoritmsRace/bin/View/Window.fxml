@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.WindowController"> 
+   <children>
+      <ImageView fitHeight="322.0" fitWidth="325.0" layoutX="-2.0" layoutY="50.0" opacity="0.18" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/banderaCarreras.jpg" />
+         </image>
+      </ImageView>
+      <Pane prefHeight="434.0" prefWidth="648.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="94.0" layoutX="1.0" layoutY="283.0" opacity="0.57" stroke="BLACK" strokeType="INSIDE" width="337.0" />
+            <ImageView fitHeight="557.0" fitWidth="765.0" layoutX="-1.0" layoutY="-37.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/desenfocadas.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="231.0" fitWidth="337.0" layoutY="55.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/descarga.jpeg" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="61.0" layoutX="-6.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="661.0">
+               <effect>
+                  <Reflection topOpacity="1.0" />
+               </effect>
+            </Rectangle>
+            <Accordion layoutY="257.0" prefHeight="120.0" prefWidth="337.0">
+              <panes>
+                <TitledPane expanded="false" prefHeight="252.0" prefWidth="235.0" text="Ver progreso">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane prefHeight="302.0" prefWidth="337.0">
+                                 <children>
+                                    <ImageView fitHeight="232.0" fitWidth="612.0" layoutX="-8.0" layoutY="-7.0" opacity="0.75" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../images/descarga.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <ProgressBar fx:id="progressArrayList" layoutX="99.0" layoutY="14.0" prefWidth="200.0" progress="0.0" />
+                                    <ProgressBar fx:id="progressLinkedList" layoutX="99.0" layoutY="41.0" prefWidth="200.0" progress="0.0" />
+                                    <ProgressBar fx:id="progressABB" layoutX="99.0" layoutY="68.0" prefWidth="200.0" progress="0.0" />
+                                    <Label layoutX="14.0" layoutY="16.0" text="ArrayList" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="14.0" layoutY="43.0" text="LinkedList" textFill="WHITE" />
+                                    <Label layoutX="14.0" layoutY="70.0" text="ABB" textFill="WHITE" />
+                                    <ImageView fitHeight="33.0" fitWidth="28.0" layoutX="302.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../images/ghost-ride2.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="24.0" fitWidth="28.0" layoutX="307.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../images/ironman.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="26.0" fitWidth="32.0" layoutX="306.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../images/capitanamerica.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                </TitledPane>
+              </panes>
+            </Accordion>
+            <Pane layoutX="-5.0" layoutY="48.0" prefHeight="209.0" prefWidth="325.0">
+               <children>
+                  <Label layoutX="28.0" layoutY="30.0" text="N:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="textF" layoutX="52.0" layoutY="25.0" opacity="0.76" prefHeight="26.0" prefWidth="79.0" promptText="10000" text="9999999" />
+                  <ComboBox fx:id="cbAlgorithm" layoutX="21.0" layoutY="84.0" opacity="0.78" prefWidth="150.0">
+                     <effect>
+                        <Reflection />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="MOVE" />
+                     </cursor></ComboBox>
+                  <ComboBox fx:id="cbMode" layoutX="21.0" layoutY="153.0" opacity="0.79" prefWidth="150.0">
+                     <effect>
+                        <Reflection bottomOpacity="0.06" fraction="0.69" topOpacity="0.57" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="MOVE" />
+                     </cursor></ComboBox>
+                  <Label layoutX="30.0" layoutY="64.0" text="Algorithm" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="30.0" layoutY="134.0" text="Mode" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="run" layoutX="211.0" layoutY="84.0" mnemonicParsing="false" onAction="#startCompetition" prefHeight="101.0" prefWidth="107.0" text="RUN">
+                     <effect>
+                        <Reflection fraction="0.27" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="WAIT" />
+                     </cursor></Button>
+                  <ImageView fitHeight="180.0" fitWidth="309.0" layoutX="224.0" layoutY="-90.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/bannerverde.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="318.0" layoutY="-27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Algorithms Competition." wrappingWidth="204.302734375">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <TabPane layoutX="338.0" layoutY="56.0" prefHeight="133.0" prefWidth="309.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Timekeeper">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="74.0" prefWidth="309.0">
+                           <children>
+                              <Circle fx:id="circle2" fill="#030303" layoutX="258.0" layoutY="50.0" radius="35.0" stroke="BLACK" strokeType="INSIDE">
+                                 <effect>
+                                    <InnerShadow color="RED" />
+                                 </effect>
+                              </Circle>
+                              <Label fx:id="timekeeper" layoutX="14.0" layoutY="19.0" prefHeight="61.0" prefWidth="262.0" text="00:00:00">
+                                 <font>
+                                    <Font name="System Bold" size="37.0" />
+                                 </font>
+                                 <effect>
+                                    <Reflection />
+                                 </effect>
+                              </Label>
+                              <Label layoutX="9.0" layoutY="72.0" prefHeight="16.0" prefWidth="262.0" text=" Minutos        Segundos     Milisegundos">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font></Label>
+                              <Circle fx:id="circle1" fill="WHITE" layoutX="258.0" layoutY="50.0" radius="36.0" stroke="#dd7373" strokeLineCap="BUTT" strokeLineJoin="BEVEL" strokeType="OUTSIDE">
+                                 <effect>
+                                    <InnerShadow color="#3da82a" />
+                                 </effect>
+                              </Circle>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+            <TabPane layoutX="338.0" layoutY="186.0" prefHeight="196.0" prefWidth="309.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Final Results">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="130.0" prefWidth="249.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="161.0" layoutX="-4.0" layoutY="-3.0" opacity="0.57" stroke="BLACK" strokeType="INSIDE" width="325.0" />
+                              <ImageView fitHeight="120.0" fitWidth="89.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/ghost-ride2.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="126.0" fitWidth="97.0" layoutX="217.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/capitanamerica.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="24.0" layoutY="98.0" text="ArrayList" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font></Label>
+                              <Label layoutX="112.0" layoutY="100.0" text="LinkedList" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font></Label>
+                              <Label layoutX="230.0" layoutY="104.0" text="ABB" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font></Label>
+                              <Label fx:id="finalResultArrayList" layoutX="24.0" layoutY="122.0" text="00:00:00" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font></Label>
+                              <Label fx:id="finalResultLinkedList" layoutX="115.0" layoutY="125.0" text="00:00:00" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font></Label>
+                              <Label fx:id="finalResultABB" layoutX="210.0" layoutY="125.0" text="00:00:00" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font></Label>
+                              <ImageView fitHeight="94.0" fitWidth="73.0" layoutX="123.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/ironman.png" />
+                                 </image>
+                              </ImageView>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="61.0" layoutX="-3.0" layoutY="373.0" opacity="0.57" stroke="BLACK" strokeType="INSIDE" width="661.0" />
+            <Text fill="WHITE" layoutX="131.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Carrera de Estructura de datos, !QUE INCREIBLE!!!" />
+            <ImageView fx:id="calavera" fitHeight="101.0" fitWidth="101.0" layoutX="68.0" layoutY="-24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/calaverablanca.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="133.0" fitWidth="140.0" layoutX="522.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/ghost-ride2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
